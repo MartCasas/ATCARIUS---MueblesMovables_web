@@ -51,16 +51,16 @@ body::-webkit-scrollbar-track {
 
 /* ------- ENCABEZADO -------- */
 .navbar {
-    padding: 0 10rem;
+    padding: 0 6rem;
     background-color: var(--bg-color);
-    position: relative;
-    top: -60px;
+    position: fixed;
+    top: -90px;
 }
 
 .logo img {
     width: 100px;
     height: 100px;
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 .header__info ul li {
@@ -77,6 +77,7 @@ body::-webkit-scrollbar-track {
     border-color: unset;
     border-width: 0;
 }
+
 .header__info ul li:hover {
     background-color: var(--secondary-bg-color);
 }
@@ -223,20 +224,21 @@ main{
 
 #p1{
     background-color: #c49725;
-	width: max-content;
+	width: 98%;
+	float: left;
 	padding-top: 20px;
 	text-align: center;
-    width: 100% !important;
+
 
 }
 #p2{
     background-color: #c49725;
-	width: max-content;
+	width: 98%;
+	float: right;
 	padding-top: 10px;
     text-align: center;
-    width: 100% !important;
-}
 
+}
 
 /* contactanos*/
 
@@ -257,7 +259,7 @@ main{
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -5%);
+    transform: translate(-50%, -50%);
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8);
   }
 

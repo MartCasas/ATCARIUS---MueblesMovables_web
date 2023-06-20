@@ -1,35 +1,39 @@
-{% extends "MueblesM/base.html" %}
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-	{% load static %}
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Description" content="Pagina para muebles" />
-    <title>Muebleria</title>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/stylemueblesmovablesproductos.css'%}">
+    <link rel="stylesheet" href="{% static 'css/stylemueblesmovables.css' %}"/>
+    <script src="{% static 'Js/App.js' %}" async></script>
+    <title>Tienda de muebles | </title>
+<script src='https://kit.fontawesome.com/b3f17f1dac.js' crossorigin="anonymous"></script>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>        <!-- Carrusel Librerias  -->
+<link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+<link rel="stylesheet" href='https://unpkg.com/primeflex@^3/primeflex.css'>
+<link rel="stylesheet" href='https://unpkg.com/primeflex/themes/saga-blue.css'>
 
-    <link rel="stylesheet" href="{% static 'css/stylemueblesmovables.css'%}" />
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/stylemueblesmovablesproductos.css'%}">
+<script src='https://kit.fontawesome.com/b3f17f1dac.js' crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
-    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
-    <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-             <!-- Carrusel Librerias  -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<title>Barra</title>
 </head>
-<body>
-<!-- HEADER -->
-{% comment %} <header class="flex w-full fixed top-0 z-1">
+<header class="flex w-full fixed top-0 z-1">
     <nav class="flex justify-content-between w-full navbar">
         <span class="logo cursor-pointer" onclick="scrollToSection('home')">
-            <img src="{% static 'MueblesMovables.jpg'%}" alt="Logo Muebleria" width="150" height="150">
+
+            <img src="{% static 'MueblesMovables.jpg' %}" alt="Logo Muebleria" >
         </span>
+
+
         <input type="checkbox" aria-label="Checkbox para mostrar y quitar carrito"
             class="checkbox xl:hidden">
         <div class="hamburger__lines">
@@ -37,197 +41,201 @@
             <span class="line line2"></span>
             <span class="line line3"></span>
         </div>
+
         <div class="header__info flex align-items-center gap-3">
             <ul class="flex flex-column xl:flex-row list-none">
-                <li onclick="scrollToSection('Carrusel')"><a class="links" href="{% static 'MueblesM/index.html'%}">Inicio</a></li>
-                <li onclick="scrollToSection('services')"><a class="links" href="{% static 'MueblesM/index.html'%}">Nosotros</a></li>
-                <li onclick="scrollToSection('contact')"><a class="links" href="{% static 'MueblesM/index.html'%}">Contactanos</a></li>
+                <li onclick="scrollToSection('Carrusel')"><a class="links" href="/">Inicio</a></li>
+                <li onclick="scrollToSection('p1')">Nosotros</li>
+                <li onclick="scrollToSection('portfolio')"><a class="links" href="/mueblesmovablesproductos/">Productos</a></li>
+                <li onclick="scrollToSection('contact')">Contactanos</li>
             </ul>
             <div class="hireMe__button pt-4">
-                <a href="" aria-label="Enviar mensaje al correo"
-                    class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm">CARRITO</a>
+                <a href="/InicioSesion/" aria-label="Enviar mensaje al correo"
+                    class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm">LOGIN</a>
             </div>
         </div>
     </nav>
-</header> {% endcomment %}
- {% block contenido %}
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1>Catálogo de productos de mueblería</h1>
+</header>
+<body>
+    {% block contenido %}
+    <header>
+        <h1>Tienda de Relojes</h1>
+    </header>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Closet</span>
+                <img src="{% static 'access/closet 1.jpg'%}" alt="" class="img-item">
+                <span class="precio-item">$50.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">English Horse</span>
+                <img src="{% static 'access/closet 2.jpeg'%}" alt="" class="img-item">
+                <span class="precio-item">$25.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Knock Nap</span>
+                <img src="{% static 'access/closet 3.jpeg'%}" alt="" class="img-item">
+                <span class="precio-item">$35.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">La Night</span>
+                <img src="{% static 'access/rack 1.jpeg'%}" alt="" class="img-item">
+                <span class="precio-item">$18.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Silver All</span>
+                <img src="{% static 'access/rack 2.jpeg'%}" alt="" class="img-item">
+                <span class="precio-item">$32.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Skin Glam</span>
+                <img src="{% static 'access/rack 3.jpeg'%}" alt="" class="img-item">
+                <span class="precio-item">$18.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Midimix</span>
+                <img src="{% static 'access/Mueble 2 Mesa Tv.PNG'%}" alt="" class="img-item">
+                <span class="precio-item">$54.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Sir Blue</span>
+                <img src="{% static 'access/Mueble 5 Sillom.PNG'%}" alt="" class="img-item">
+                <span class="precio-item">$32.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Middlesteel</span>
+                <img src="{% static 'access/Mueble 8 Velador.PNG'%}" alt="" class="img-item">
+                <span class="precio-item">$42.800</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
 
-<div class="container">
+            </div>
 
-		<div class="product-row">
-
-
-				<div class="card">
-					<img src="{% static 'access/closet 1.jpg' %}" alt="Closet 1">
-					<h2>Closet N°1</h2>
-					<p>Closet de melamina gris.</p>
-					<p class="price">$140.000</p>
-				</div>
-&nbsp;
-&nbsp;
-&nbsp;
-				<div class="card">
-					<img src="{% static 'access/closet 2.jpeg' %}" alt="Closer 2">
-					<h2>Closet°2</h2>
-					<p>Closet de melamina blanca 2.</p>
-					<p class="price">$94.990</p>
-				</div>
-&nbsp;
-&nbsp;
-&nbsp;
-				<div class="card">
-					<img src="{% static 'access/closet 3.jpeg' %}" alt="Closet 3">
-					<h2>Closet°3</h2>
-					<p>Closet de madera negra.</p>
-					<p class="price">$120.000</p>
-				</div>
-
-
-		</div>
-<div class="product-row">
-			<div class="card">
-				<img src="{% static 'access/closet 4.jpeg'%}" alt="Closet 4">
-				<h2>Closet°4</h2>
-				<p>Closet de melamina malbec.</p>
-				<p class="price">$80.000</p>
-			</div>
-&nbsp;
-&nbsp;
-&nbsp;
-			<div class="card">
-				<img src="{% static 'access/escritorio 1.jpeg'%}" alt="Escritorio 1">
-				<h2>Escritorio°1</h2>
-				<p>Escritorio simple base metalica .</p>
-				<p class="price">$55.000</p>
-			</div>
-&nbsp;
-&nbsp;
-&nbsp;
-			<div class="card">
-				<img src="{% static 'access/mesa 1.jpeg'%}" alt="Mesa 1">
-				<h2>Mesa°1</h2>
-				<p>Mesa de centro geométrica.</p>
-				<p class="price">$65.000</p>
-			</div>
-		</div>
-        <div class="product-row">
-
-			<div class="card">
-				<img src="{% static 'access/Mueble 1 Mesa Tv.PNG'%}" alt="Mesa TV 1">
-				<h2>Rack pequeño°1</h2>
-				<p>Rack pequeño para TV malbec.</p>
-				<p class="price">$95.000</p>
-			</div>
-&nbsp;
-&nbsp;
-&nbsp;
-			<div class="card">
-				<img src="{% static 'access/Mueble 2 Mesa Tv.PNG'%}" alt="Mesa TV 2">
-				<h2>Rack pequeño°2</h2>
-				<p>Rack pequeño para TV con cajones blancos.</p>
-				<p class="price">$62.000</p>
-			</div>
-&nbsp;
-&nbsp;
-&nbsp;
-			<div class="card">
-				<img src="{% static 'access/Mueble 3 Rack.PNG'%}" alt="Mueble 3">
-				<h2>Rack pequeño°3</h2>
-				<p>Rack pequeño para TV con cajones blancos.</p>
-				<p class="price">$87.000</p>
-			</div>
-		</div>
-        <div class="product-row">
-
-			<div class="card">
-				<img src="{% static 'access/rack 1.jpeg'%}" alt="Rack 1">
-				<h2>Rack°1</h2>
-				<p>Rack alto 2 cajones.</p>
-				<p class="price">$45.000</p>
-			</div>
-&nbsp;
-&nbsp;
-&nbsp;
-			<div class="card">
-				<img src="{% static 'access/rack 2.jpeg' %}" alt="Rack 2">
-				<h2>Rack°2</h2>
-				<p>Rack alto 5 cajones color nogal.</p>
-				<p class="price">$165.000</p>
-			</div>
-&nbsp;
-&nbsp;
-&nbsp;
-            <div class="card">
-				<img src="{% static 'access/rack 3.jpeg' %}" alt="Rack 3">
-				<h2>Rack°3</h2>
-				<p>Rack alto 5 cajones color caoba.</p>
-				<p class="price">$128.000</p>
-			</div>
-
-		</div>
-        <div class="product-row">
-			<div class="card">
-				<img src="{% static 'access/Mueble 10 Buffets.PNG'%}" alt="Mueble Buffets">
-				<h2>Mueble Buffert°1</h2>
-				<p>Mueble estilo Buffert color nogal.</p>
-				<p class="price">$125.000</p>
-			</div>
-&nbsp;
-&nbsp;
-&nbsp;
-			<div class="card">
-				<img src="{% static 'access/Mueble 9 Escritorio.PNG'%}" alt="Mueble Escritorio">
-				<h2>Escritorio°1</h2>
-				<p>Escritorio alto sin cajones.</p>
-				<p class="price">105.000</p>
-			</div>
-&nbsp;
-&nbsp;
-&nbsp;
-			<div class="card">
-				<img src="{% static 'access/Mueble 7 Mesa Centro.PNG'%}" alt="Mesa Centro">
-				<h2>Mesa°2</h2>
-				<p>Mesa centro base metalica.</p>
-				<p class="price">$64.990</p>
-			</div>
-		</div>
-        <div class="product-row">
-			<div class="card">
-				<img src="{% static 'access/Mueble 8 Velador.PNG'%}" alt="Mueble Velador">
-				<h2>Mueble Velador°1</h2>
-				<p>Velador pequeño color malnbec</p>
-				<p class="price">$25.000</p>
-			</div>
-&nbsp;
-&nbsp;
-&nbsp;
-			<div class="card">
-				<img src="img.PNG" alt="img">
-				<h2>Fuera de Stock</h2>
-				<p>descripcion.</p>
-				<p class="price">$0</p>
-			</div>
-&nbsp;
-&nbsp;
-&nbsp;
-			<div class="card">
-				<img src="img.PNG" alt="img">
-				<h2>Fuera de Stock</h2>
-				<p>descripcion.</p>
-				<p class="price">$0</p>
-			</div>
-		</div>
-	</div>
-
-	{% endblock %}
+            <div class="carrito-items">
+                <!--
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
 </body>
+<footer id="p2" class=" bg-dark text-center text-white">
 
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-4" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-4" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-4" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-4" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-4" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">Muebles Movables
+          </h6>
+          <p>
+            Comprometidos sismepre en la elavoracion gestion y atencion de cada uno de nuestros productos como de nuestros clientes.
+          </p>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h6 class="text-uppercase fw-bold mb-4">Información de la empresa</h6>
+          <p><i class="fas fa-home me-3"></i> Nuñoa, calleje Juanito Fernandez #2753</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            contacto@mueblesmovables.com
+          </p>
+          <p><i class="fas fa-phone me-4"></i> + 332-676-559</p>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="/">MueblesMovables.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</html>

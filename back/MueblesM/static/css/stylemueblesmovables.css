@@ -1,0 +1,345 @@
+/* --------ESTILO GENERAL-------- */
+* {
+    margin: -3;
+    padding: 0;
+    scroll-padding-top: -3rem;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --font-color: #000000;
+    --secondary-bg-color: #e3d132;
+    --font: "Poppins";
+}
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font);
+    color: var(--font-color);
+    height: 100vh;
+    max-width: 100vw;
+}
+
+.container {
+    padding: 0rem 10rem;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+/* ------ CAMBIO DE SCROLL BAR-------*/
+body::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(165, 162, 162);
+}
+body::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:active {
+    background-color: var(--secondary-bg-color);
+}
+body::-webkit-scrollbar-track {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(104, 103, 103, 0.3);
+}
+
+/* ------- ENCABEZADO -------- */
+.navbar {
+    padding: 0 10rem;
+    background-color: var(--bg-color);
+    position: relative;
+    top: -60px;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin-top: 6rem;
+}
+
+.header__info ul li {
+    padding: 2.5rem 1.2rem 1rem 1.2rem;
+    cursor: pointer;
+}
+
+.hireMe__button a {
+    background-color: var(--secondary-bg-color);
+    color: black;
+    font-family:"Poppins", sans-serif;
+    font-size:0px;
+    padding: 2rem 3.5rem;
+    border-color: unset;
+    border-width: 0;
+}
+.header__info ul li:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+
+/**Funcion para que se haga responsiva la Scroll Bar**/
+
+@media screen and (max-width: 1200px) {
+    .navbar {
+        padding: 0 2rem;
+    }
+    .navbar .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        top: 2rem;
+        right: 2rem;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar .hamburger__lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar .hamburger__lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #ffffff;
+    }
+    .navbar .hamburger__lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar .hamburger__lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    .navbar .hamburger__lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .header__info ul li {
+        padding: 0;
+        margin: 2rem 0;
+        cursor: pointer;
+        font-size: x-large;
+    }
+
+    .header__info ul li:hover {
+        background-color: unset;
+    }
+
+    .header__info {
+        padding-top: 120px;
+        height: 100vh;
+        background: var(--secondary-bg-color);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: auto;
+        transform: translate(150%);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .header__info {
+        transform: translateX(0);
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .hamburger__lines .line1 {
+        transform: rotate(45deg);
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .hamburger__lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
+        transform: rotate(-45deg);
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .navbar{
+        padding: 0 12rem;
+    }
+    .navbar .checkbox, .navbar .hamburger__lines {
+        right: 12rem;
+    }
+}
+
+/**Carrusel configuraciones**/
+
+#Carrusel{
+    background-color: #c49725;
+    display: block;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+
+}
+.carruselIMG{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 560px;
+}
+.precio{
+    position: relative;
+    font-size: 35px;
+    padding-left: -40%;
+    color: white;
+}
+
+.carousel-inner img {
+    width: 50%;
+    max-height: 560px;
+}
+
+/**Main **/
+
+main{
+    background-color: #c49725;
+
+
+}
+
+#p1{
+    background-color: #c49725;
+	width: max-content;
+	padding-top: 20px;
+	text-align: center;
+    width: 100% !important;
+
+}
+#p2{
+    background-color: #c49725;
+	width: max-content;
+	padding-top: 10px;
+    text-align: center;
+    width: 100% !important;
+}
+
+
+/* contactanos*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #fbfdfd;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .form-contact {
+    background: #FFF;
+    width: 400px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8);
+  }
+
+  header.Contacto {
+    width: 100%;
+    background: #c49725;
+    overflow: hidden;
+    color: white;
+  }
+
+  header span {
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    padding: 2.5rem;
+  }
+
+  .contact {
+    padding: .8rem;
+    overflow: hidden;
+    color: gray;
+  }
+
+  .contact label, .contact input, .contact textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .contact label {
+    font-weight: 700;
+  }
+
+  .contact input:not([type='submit']), .contact textarea {
+    border: none;
+    border-bottom: 2px solid #c49725;
+    margin-bottom: 10px;
+    font-size: 20px;
+    outline: none;
+    color: gray;
+  }
+
+  .contact textarea {
+    min-height: 100px;
+  }
+
+  input[type='submit'] {
+    padding: 10px;
+    background: #c49725;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+
+.cookies {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    color: #c49725;
+    font-family: arial;
+    text-align: center;
+}
+
+.cookies__boton {
+
+    background: initial;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 1rem;
+    font-size: 1rem;
+    color:white;
+    width: 5rem;
+    text-align: center;
+}
+
+.links{
+    color: black;
+    text-decoration: none;
+
+}
+

@@ -1,0 +1,123 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+        <link rel = "stylesheet" type = "text/css" href = "https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css"/>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src = "https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+
+
+
+  </head>
+  <body>
+
+
+  {% block content %}
+  <div class="formulario">
+      <div class="col-md-12" id="container">
+          <form method="POST" class="post-form" >
+          {% csrf_token %}
+          <div class="container">
+              <div class="col-12">
+              <h3>Agregar Muebles</h3>
+              </div>
+              <br>
+              <div class="mb-3">
+                  <label>Marca:</label>
+                  {{ form.marca }}
+              </div>
+              <div class="mb-3">
+                  <label>Tipo_mueble:</label>
+                  {{ form.tipo_mueble }}
+              </div>
+              <div class="mb-3">
+                  <label>Precio:</label>
+                  {{ form.precio }}
+              </div>
+              <div class="mb-3">
+                  <label>Tipo_madera:</label>
+                  {{ form.tipo_madera }}
+              </div>
+              <div class="mb-3">
+                  <label>Nuevo:</label>
+                  {{ form.nuevo }}
+              </div>
+              <div class="mb-3">
+                  <label>Fecha_fabricacion:</label>
+                  {{ form.fecha_fabricacion }}
+              </div>
+              <div class="mb-3">
+                  <label>Descripcion:</label>
+                  {{ form.descripcion }}
+              </div>
+              <div class="mb-3" id="botones">
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <button type="btn" class="btn btn-primary"><a href="/listarProductos/">Ver listado</a></button>
+              </div>
+          </div>
+          </form>
+      </div>
+  </div>
+  <div class="formu"></div>
+  {% endblock content %}
+  </body>
+
+  <style>
+      body{
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          min-height: 100vh;
+          padding: 0;
+          background: linear-gradient(120deg,rgba(235, 191, 81, 0.793), #e6ba4a);
+          height: 100vh;
+          overflow: hidden;
+        }
+        form {
+          padding: 0px 600px;
+          }
+
+      .col-12{
+          text-align: center;
+          padding: 10px 0;
+          border-bottom: 3px solid rgb(245, 243, 243);
+          background-color: white;
+          border-radius: 10px;
+      }
+      .mb-3 label{
+        color: #000000;
+        font-size: 18px;
+        font-family: "Poppins", sans-serif;
+      }
+      .mb-3 button{
+          width: 150px;
+          height: 50px;
+          border: 1px solid;
+          background: #c49725;
+          border-radius: 25px;
+          font-size: 16px;
+          color: #000000;
+          font-weight: 700;
+          cursor: pointer;
+          outline: none;
+      }
+      .mb-3 a{
+          animation: none;
+          color: black;
+      }
+      #botones{
+        display: inline-flex;
+      }
+  </style>
